@@ -12,11 +12,24 @@ public:
         this->min = min;
         this->s = s;
     }
+    int getH(){
+        return this->h;
+    };
     F &operator++(int)
     {
         d++;
         return *this;
     }
+    F operator-(F a){
+        if(this->getH() > a.getH()){
+            this->a - a.a;
+            this->m - a.m;
+            this->d - a.d;
+            this->h - a.h;
+            this->min - a.min;
+            this->s - s;
+        }
+    };
     F operator--()
     {
         d--;
